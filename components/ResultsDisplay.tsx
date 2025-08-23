@@ -203,9 +203,9 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ plan, generationContext
   const buttonClass = "flex items-center gap-2 px-4 py-2 text-sm bg-gray-700 text-gray-200 font-semibold rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-primary-hover disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300";
 
   return (
-    <div className="max-w-6xl mx-auto animate-fade-in relative">
+    <div className="max-w-6xl mx-auto progressive-load">
        <FloatingNav sections={sections} activeSectionId={activeSectionId} />
-       <div className="flex flex-wrap justify-end items-center gap-3 mb-8">
+       <div className="flex flex-wrap justify-end items-center gap-3 mb-8 animate-slide-down">
         <button onClick={handleDownloadTxt} className={buttonClass}>
           <DownloadIcon className="w-5 h-5" />
           Download TXT
@@ -218,7 +218,8 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ plan, generationContext
 
       <div ref={resultsRef} className="space-y-12 bg-gray-900 p-0.5">
         {architecture && (
-          <section id="architecture" ref={el => { sectionRefs.current['architecture'] = el; }}>
+          <section id="architecture" ref={el => { sectionRefs.current['architecture'] = el; }}
+                   className="card-hover delay-100">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Architecture: {architecture.name}</h2>
               <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
               <p className="text-gray-300 mb-4">{architecture.reasoning}</p>
@@ -233,16 +234,18 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ plan, generationContext
         )}
 
         {database && (
-            <section id="database" ref={el => { sectionRefs.current['database'] = el; }}>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Database: {database.type}</h2>
-                <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
-                    <p className="text-gray-300">{database.reasoning}</p>
-                </div>
-            </section>
+          <section id="database" ref={el => { sectionRefs.current['database'] = el; }}
+                   className="card-hover delay-200">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Database: {database.type}</h2>
+              <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
+                  <p className="text-gray-300">{database.reasoning}</p>
+              </div>
+          </section>
         )}
 
         {databaseModels && databaseModels.length > 0 && (
-          <section id="database-models" ref={el => { sectionRefs.current['database-models'] = el; }}>
+          <section id="database-models" ref={el => { sectionRefs.current['database-models'] = el; }}
+                   className="card-hover delay-300">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Database Models</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {databaseModels.map((model) => (

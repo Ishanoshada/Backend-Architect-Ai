@@ -30,32 +30,50 @@ interface Example {
 }
 
 const examples: Example[] = [
-    { idea: "A recipe sharing platform where users can post recipes and create meal plans.", features: "Recipe CRUD, user authentication, meal planner", complexity: "Standard (MVP)", database: "PostgreSQL" },
-    { idea: "An e-commerce site for custom-printed T-shirts with a design editor.", features: "Product catalog, Stripe integration, image uploads", techStack: "Node.js (Express)", architecture: "Monolithic", complexity: "Scalable / Production", database: "MongoDB" },
-    { idea: "A real-time language translation chat application.", features: "WebSocket chat, user accounts, message history", techStack: "Go (Gin)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "Redis" },
-    { idea: "A fitness tracker app that logs workouts and visualizes progress.", features: "Workout logging, data visualization, user goals", techStack: "Python (Django)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
-    { idea: "A booking system for a local barbershop.", features: "Appointment scheduling, service management, email reminders", techStack: "PHP (Laravel)", architecture: "Monolithic", complexity: "Simple / Prototyping", database: "MySQL" },
-    { idea: "A collaborative project management tool like a simple Trello.", features: "Kanban boards, task assignments, real-time updates", techStack: "Ruby on Rails", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
-    { idea: "A music streaming service that recommends songs based on listening history.", features: "Audio streaming, user playlists, recommendation engine", techStack: "Java (Spring Boot)", architecture: "Microservices", complexity: "Scalable / Production", database: "Cassandra" },
-    { idea: "A blog platform with a Markdown editor and comments.", features: "Post creation, user comments, rich text editing", techStack: "Python (Flask)", architecture: "", complexity: "Simple / Prototyping", database: "SQLite" },
-    { idea: "A URL shortener service like Bitly with analytics.", features: "Shorten URL, custom aliases, click tracking", techStack: "Python (Flask)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "Redis" },
-    { idea: "An API to serve a machine learning model for image recognition.", features: "Image upload endpoint, run inference, return prediction", techStack: "Python (Flask)", architecture: "Microservices", complexity: "Standard (MVP)", database: "JSON (File-based)" },
-    { idea: "Backend for a real-time stock price dashboard.", features: "Fetch data from financial API, WebSocket updates, user watchlist", techStack: "Python (Flask)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "PostgreSQL" },
-    { idea: "A simple community forum or message board application.", features: "User registration, create topics/posts, threaded comments", techStack: "Python (Flask)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
-    { idea: "A pet adoption platform connecting shelters with potential adopters.", features: "Pet profiles, search and filter, application forms", techStack: "C# (ASP.NET Core)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "SQL Server" },
-    { idea: "An internal tool for a company to track employee vacation days.", features: "Leave requests, approval workflow, calendar view", complexity: "Standard (MVP)", database: "PostgreSQL" },
-    { idea: "IoT dashboard for monitoring smart home devices in real-time.", features: "Real-time data streams, device control, user alerts", techStack: "Node.js (Express)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "InfluxDB" },
-    { idea: "A ride-sharing app backend similar to Uber.", features: "Geolocation tracking, trip matching, payment processing", techStack: "Go (Gin)", architecture: "Microservices", complexity: "Enterprise / High-Complexity", database: "PostgreSQL" },
-    { idea: "An online learning platform with video courses and quizzes.", features: "Video streaming, course progression, user authentication", techStack: "Python (Django)", architecture: "Hexagonal (Ports & Adapters)", complexity: "Scalable / Production", database: "PostgreSQL" },
-    { idea: "A serverless API for a financial news aggregator.", features: "Data ingestion from multiple sources, REST API for news articles, user subscriptions", techStack: "Python (Flask)", architecture: "Serverless", complexity: "Scalable / Production", database: "DynamoDB" },
-    { idea: "Backend for a turn-based multiplayer strategy game.", features: "Matchmaking, game state management, leaderboards", techStack: "Java (Spring Boot)", architecture: "CQRS", complexity: "Scalable / Production", database: "Redis" },
-    { idea: "A personal finance tracker that uses AI to categorize expenses and provide savings suggestions.", features: "Automated expense tracking, AI-powered insights, budget planning", techStack: "Python (Django)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
-    { idea: "A real-time collaborative document editor like Google Docs.", features: "Real-time text sync (CRDTs), user presence, document versioning", techStack: "Node.js (Express)", architecture: "Event-Driven", complexity: "Enterprise / High-Complexity", database: "MongoDB" },
-    { idea: "A website uptime monitoring service that sends alerts on downtime.", features: "Scheduled health checks, email/SMS alerts, performance dashboards", techStack: "Go (Gin)", architecture: "Microservices", complexity: "Scalable / Production", database: "Prometheus" },
-    { idea: "A mental wellness and journaling app with mood tracking and guided meditations.", features: "Private journaling, mood analytics, audio streaming", techStack: "Ruby on Rails", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
-    { idea: "A subscription-based meal kit delivery service.", features: "Recipe management, subscription billing, delivery logistics", techStack: "PHP (Laravel)", architecture: "Monolithic", complexity: "Scalable / Production", database: "MySQL" },
-    { idea: "A platform for developers to share and discover public APIs.", features: "API listing, user reviews, search and categorization", techStack: "Python (Flask)", architecture: "", complexity: "Standard (MVP)", database: "JSON (File-based)" },
-    { idea: "An inventory management system for a small business.", features: "Product tracking, stock level alerts, purchase order management", techStack: "C# (ASP.NET Core)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "SQL Server" }
+  { idea: "A recipe sharing platform where users can post recipes and create meal plans.", features: "Recipe CRUD, user authentication, meal planner", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "An e-commerce site for custom-printed T-shirts with a design editor.", features: "Product catalog, Stripe integration, image uploads", techStack: "Node.js (Express)", architecture: "Monolithic", complexity: "Scalable / Production", database: "MongoDB" },
+  { idea: "A real-time language translation chat application.", features: "WebSocket chat, user accounts, message history", techStack: "Go (Gin)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "Redis" },
+  { idea: "A fitness tracker app that logs workouts and visualizes progress.", features: "Workout logging, data visualization, user goals", techStack: "Python (Django)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "A booking system for a local barbershop.", features: "Appointment scheduling, service management, email reminders", techStack: "PHP (Laravel)", architecture: "Monolithic", complexity: "Simple / Prototyping", database: "MySQL" },
+  { idea: "A collaborative project management tool like a simple Trello.", features: "Kanban boards, task assignments, real-time updates", techStack: "Ruby on Rails", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "A music streaming service that recommends songs based on listening history.", features: "Audio streaming, user playlists, recommendation engine", techStack: "Java (Spring Boot)", architecture: "Microservices", complexity: "Scalable / Production", database: "Cassandra" },
+  { idea: "A blog platform with a Markdown editor and comments.", features: "Post creation, user comments, rich text editing", techStack: "Python (Flask)", architecture: "", complexity: "Simple / Prototyping", database: "SQLite" },
+  { idea: "A URL shortener service like Bitly with analytics.", features: "Shorten URL, custom aliases, click tracking", techStack: "Python (Flask)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "Redis" },
+  { idea: "An API to serve a machine learning model for image recognition.", features: "Image upload endpoint, run inference, return prediction", techStack: "Python (Flask)", architecture: "Microservices", complexity: "Standard (MVP)", database: "JSON (File-based)" },
+  { idea: "Backend for a real-time stock price dashboard.", features: "Fetch data from financial API, WebSocket updates, user watchlist", techStack: "Python (Flask)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "PostgreSQL" },
+  { idea: "A simple community forum or message board application.", features: "User registration, create topics/posts, threaded comments", techStack: "Python (Flask)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "A pet adoption platform connecting shelters with potential adopters.", features: "Pet profiles, search and filter, application forms", techStack: "C# (ASP.NET Core)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "SQL Server" },
+  { idea: "An internal tool for a company to track employee vacation days.", features: "Leave requests, approval workflow, calendar view", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "IoT dashboard for monitoring smart home devices in real-time.", features: "Real-time data streams, device control, user alerts", techStack: "Node.js (Express)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "InfluxDB" },
+  { idea: "A ride-sharing app backend similar to Uber.", features: "Geolocation tracking, trip matching, payment processing", techStack: "Go (Gin)", architecture: "Microservices", complexity: "Enterprise / High-Complexity", database: "PostgreSQL" },
+  { idea: "An online learning platform with video courses and quizzes.", features: "Video streaming, course progression, user authentication", techStack: "Python (Django)", architecture: "Hexagonal (Ports & Adapters)", complexity: "Scalable / Production", database: "PostgreSQL" },
+  { idea: "A serverless API for a financial news aggregator.", features: "Data ingestion from multiple sources, REST API for news articles, user subscriptions", techStack: "Python (Flask)", architecture: "Serverless", complexity: "Scalable / Production", database: "DynamoDB" },
+  { idea: "Backend for a turn-based multiplayer strategy game.", features: "Matchmaking, game state management, leaderboards", techStack: "Java (Spring Boot)", architecture: "CQRS", complexity: "Scalable / Production", database: "Redis" },
+  { idea: "A personal finance tracker that uses AI to categorize expenses and provide savings suggestions.", features: "Automated expense tracking, AI-powered insights, budget planning", techStack: "Python (Django)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "A real-time collaborative document editor like Google Docs.", features: "Real-time text sync (CRDTs), user presence, document versioning", techStack: "Node.js (Express)", architecture: "Event-Driven", complexity: "Enterprise / High-Complexity", database: "MongoDB" },
+  { idea: "A website uptime monitoring service that sends alerts on downtime.", features: "Scheduled health checks, email/SMS alerts, performance dashboards", techStack: "Go (Gin)", architecture: "Microservices", complexity: "Scalable / Production", database: "Prometheus" },
+  { idea: "A mental wellness and journaling app with mood tracking and guided meditations.", features: "Private journaling, mood analytics, audio streaming", techStack: "Ruby on Rails", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "A subscription-based meal kit delivery service.", features: "Recipe management, subscription billing, delivery logistics", techStack: "PHP (Laravel)", architecture: "Monolithic", complexity: "Scalable / Production", database: "MySQL" },
+  { idea: "A platform for developers to share and discover public APIs.", features: "API listing, user reviews, search and categorization", techStack: "Python (Flask)", architecture: "", complexity: "Standard (MVP)", database: "JSON (File-based)" },
+  { idea: "An inventory management system for a small business.", features: "Product tracking, stock level alerts, purchase order management", techStack: "C# (ASP.NET Core)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "SQL Server" },
+
+  // Additional examples (including tourism apps and others)
+  { idea: "A tourism guide app that recommends attractions, tours, and local eateries.", features: "Location-based recommendations, user reviews, booking links", techStack: "Node.js (Express)", architecture: "Microservices", complexity: "Scalable / Production", database: "Elasticsearch" },
+  { idea: "An AR sightseeing tour app for cities with guided overlays and POIs.", features: "Augmented reality overlays, offline maps, audio guides", techStack: "Node.js (Express)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "MongoDB" },
+  { idea: "A travel itinerary planner that builds day-by-day plans and syncs with calendars.", features: "Itinerary generation, calendar integration, suggestions by interest", techStack: "Python (Django)", architecture: "Hexagonal (Ports & Adapters)", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "A hotel and experience aggregator for tourists with comparison and reviews.", features: "Price comparisons, booking redirects, user ratings", techStack: "Java (Spring Boot)", architecture: "Microservices", complexity: "Scalable / Production", database: "Cassandra" },
+  { idea: "A local events & meetups app to discover community activities while traveling.", features: "Event discovery, ticketing integration, organizer tools", techStack: "Ruby on Rails", architecture: "Monolithic", complexity: "Standard (MVP)", database: "PostgreSQL" },
+  { idea: "A multi-city public transit planner with offline schedules and trip optimization.", features: "Route planning, offline timetables, real-time delays", techStack: "Go (Gin)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "Redis" },
+  { idea: "A digital concierge chatbot for hotels to handle guest requests and bookings.", features: "Chat interface, room service ordering, local recommendations", techStack: "Node.js (Express)", architecture: "Serverless", complexity: "Standard (MVP)", database: "DynamoDB" },
+  { idea: "A marketplace connecting local tour guides with travelers.", features: "Guide profiles, booking & reviews, payment processing", techStack: "PHP (Laravel)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "MySQL" },
+
+  // Other varied ideas
+  { idea: "A peer-to-peer lending platform with credit scoring and escrow.", features: "Loan requests, risk scoring, escrow payments", techStack: "Java (Spring Boot)", architecture: "Microservices", complexity: "Enterprise / High-Complexity", database: "PostgreSQL" },
+  { idea: "A telemedicine backend for scheduling virtual doctor visits and storing records.", features: "Video consults, EHR integration, prescription management", techStack: "Python (Django)", architecture: "Hexagonal (Ports & Adapters)", complexity: "Enterprise / High-Complexity", database: "PostgreSQL" },
+  { idea: "A decentralized marketplace using blockchain for ownership proofs.", features: "NFT listings, on-chain transactions, wallet integration", techStack: "Node.js (Express)", architecture: "Microservices", complexity: "Scalable / Production", database: "IPFS" },
+  { idea: "A smart parking app that shows available spots and enables reservations.", features: "Real-time spot detection, payments, navigation to spot", techStack: "Go (Gin)", architecture: "Event-Driven", complexity: "Scalable / Production", database: "InfluxDB" },
+  { idea: "A B2B CRM dashboard with sales pipeline and analytics.", features: "Contacts, deals, reporting, role-based access", techStack: "C# (ASP.NET Core)", architecture: "Monolithic", complexity: "Standard (MVP)", database: "SQL Server" },
+  { idea: "An app that analyzes meeting transcripts and generates action items.", features: "Speech-to-text, NLP summarization, task extraction", techStack: "Python (Flask)", architecture: "Microservices", complexity: "Scalable / Production", database: "Elasticsearch" }
 ];
 
 
@@ -104,13 +122,13 @@ const InputForm: React.FC<InputFormProps> = ({
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+      <div className="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:shadow-xl animate-fade-in">
         <div className="space-y-6">
           <textarea
             value={appIdea}
             onChange={(e) => setAppIdea(e.target.value)}
             placeholder="Describe your application idea... e.g., 'A social media app for pet owners to share photos and schedule playdates.'"
-            className="w-full h-40 p-4 bg-gray-900 border border-gray-600 rounded-lg text-gray-200 focus:ring-2 focus:ring-primary focus:outline-none resize-none transition-colors"
+            className="w-full h-40 p-4 bg-gray-900 border border-gray-600 rounded-lg text-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent focus:outline-none resize-none transition-all duration-300 hover:border-primary"
             disabled={isLoading || isLimitReached}
           />
            <div>
@@ -226,8 +244,9 @@ const InputForm: React.FC<InputFormProps> = ({
         </div>
 
         <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <button onClick={handleTryExample} disabled={isLoading || isLimitReached} className="flex items-center gap-2 text-sm text-primary hover:text-primary-hover font-semibold transition-colors disabled:text-gray-600 disabled:cursor-not-allowed order-2 sm:order-1">
-              <SparklesIcon className="w-5 h-5" />
+          <button onClick={handleTryExample} disabled={isLoading || isLimitReached} 
+                  className="flex items-center gap-2 text-sm text-primary hover:text-primary-hover font-semibold transition-all duration-300 hover:scale-105 disabled:text-gray-600 disabled:cursor-not-allowed order-2 sm:order-1">
+              <SparklesIcon className="w-5 h-5 animate-pulse-slow" />
               Try an Example
           </button>
           <div className="text-gray-400 order-1 sm:order-2 text-center">
@@ -242,7 +261,7 @@ const InputForm: React.FC<InputFormProps> = ({
           </button>
         </div>
         {isLimitReached && (
-          <p className="text-center text-red-400 mt-4 text-sm">
+          <p className="text-center text-red-400 mt-4 text-sm animate-slide-down">
             You have reached your generation limit. Please refresh for a new session later.
           </p>
         )}
